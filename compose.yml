@@ -5,7 +5,7 @@ services:
     image: ghcr.io/driftywinds/twitchrise-bot:latest
     container_name: twitchrise-bot
     volumes:
-      - ./watchlists.json:/app/watchlists.json
+      - /home/truenas_admin/files/watchlists.json:/app/watchlists.json
       - ./.env:/app/.env:ro
     restart: unless-stopped
     tty: true
